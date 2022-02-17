@@ -14,3 +14,35 @@ BEGIN
     END_FOR
 
 END
+
+
+
+
+PROCEDURE  dot_product ( VAR ps:integer)
+VAR
+j:integer:=0;
+BEGIN
+    ps:=ps+(v1[i]*v2[j]);
+    j++;
+END
+
+ALGORITHM produit_scalaire
+VAR
+    v1:=ARRAY_OF integer[2];
+    v2:=ARRAY_OF integer [2];
+    scal:integer
+BEGIN
+
+    read(v1);
+    read(v2);
+        FOR i FROM 0 TO v1.length-1   DO
+            dot_product(scal);
+        END_FOR
+
+        IF (scal=0) THEN
+            write("les vecteur ne sont pas orthogonaux");
+        ELSE 
+            write("les vecteurs sont orthogonaux");
+        END_IF
+
+END
